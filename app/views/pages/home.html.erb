@@ -1,9 +1,25 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
+
+<ul>
+
+  <%= @trips.each do |trip| %>
+  <li>
+    <%= link_to trip.photo, trip_path(trip) %>
+    <h3><%= trip.name %></h3>
+    <h4><%= trip.description %></h4>
+    <p><%= trip.date %></p>
+    <p><%= trip.price_experience %></p>
+    <p><%= trip.category %></p>
+  </li>
+  <% end %>
+</ul>
+
 <%= link_to "Edit your profile", profile_edit_path, class: "btn btn-primary"  %>
 
 
 <%= link_to destroy_user_session_path, method: :delete do %>
   <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
 <% end %>
+
