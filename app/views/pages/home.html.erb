@@ -1,2 +1,17 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<%= link_to "test show", trip_path %>
+
+<ul>
+  <% @trips.each do |trip| %>
+  <li>
+    <%= link_to trip.photo, trip_path(trip) %>
+    <h3><%= trip.name %></h3>
+    <h4><%= trip.description %></h4>
+    <p><%= trip.date %></p>
+    <p><%= trip.price_experience %></p>
+    <p><%= trip.category %></p>
+  </li>
+  <% end %>
+</ul>
