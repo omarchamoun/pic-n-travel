@@ -40,6 +40,10 @@ class TripsController < ApplicationController
     redirect_to trips_path
   end
 
+  def my_trips
+   @my_trips = current_user.trips
+  end
+
   private
 
   def trip_params

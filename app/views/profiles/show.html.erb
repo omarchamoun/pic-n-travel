@@ -1,3 +1,13 @@
-User profile
 
-<%= @user.first_name  %>
+User profile
+<%= @profile %>
+
+<ul>
+<li><%= link_to "My Bookings", my_bookings_path %></li>
+
+<li><%= link_to "My Trips", my_trips_path %></li>
+
+<li><%= link_to "Saved Trips", my_saved_trips_path %></li>
+
+<li><%= link_to "Statistics", stats_path %></li>
+</ul>
