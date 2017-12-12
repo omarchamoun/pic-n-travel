@@ -20,6 +20,10 @@ class TripsController < ApplicationController
   def destroy
   end
 
+  def my_trips
+   @my_trips = current_user.trips
+  end
+
   private
 
   def trip_params
