@@ -1,10 +1,11 @@
 class TripsController < ApplicationController
+  before_action :set_trip, only: [:show, :edit, :update, :destroy]
+  before_action :set_profile, only: [:create, :edit, :update, :destroy]
   def index
     @trips = Trips.all
   end
 
   def show
-    @trip = Trips.find(params[:id])
   end
 
   def new
@@ -13,12 +14,24 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(trip_params)
+    @trip.profile = @profile
+
+    if @trip.save
+      redirect_to trip_path(@trip)
+    end
   end
 
   def edit
+    unless @trip.profile == @profile
+      redirect_to trips_path
   end
 
   def update
+    if @trip.update(trip_params)
+      redirect_to trip_path(@trip)
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -31,9 +44,11 @@ class TripsController < ApplicationController
   end
 
   def set_profile
+    @profile = current_profile
   end
 
   def set_trip
+    @trip = Trips.find(params[:id])
   end
 
 end
