@@ -24,8 +24,7 @@ ActiveRecord::Schema.define(version: 20171212141214) do
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.boolean "creator"
-    t.string "user_name"
+    t.boolean "user_namecreator"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
