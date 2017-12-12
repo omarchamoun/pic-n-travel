@@ -1,14 +1,18 @@
 class TripsController < ApplicationController
   def index
+    @trips = Trips.all
   end
 
   def show
+    @trip = Trips.find(params[:id])
   end
 
   def new
+    @trip = Trip.new
   end
 
   def create
+    @trip = Trip.new(trip_params)
   end
 
   def edit
@@ -23,6 +27,7 @@ class TripsController < ApplicationController
   private
 
   def trip_params
+    params.require(:trip).permit(:name, :price_experience, :date, :description, :category)
   end
 
   def set_profile
