@@ -1,10 +1,12 @@
 class ProfilesController < ApplicationController
 
-  def profile
+  def show
     @user = current_user
   end
 
   def edit
+    @profile = current_user.profile
+
   end
 
   def update
