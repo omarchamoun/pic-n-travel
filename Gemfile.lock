@@ -120,6 +120,8 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails-ujs (0.1.0)
+      railties (>= 3.1)
     railties (5.1.4)
       actionpack (= 5.1.4)
       activesupport (= 5.1.4)
@@ -198,6 +200,7 @@ DEPENDENCIES
   pry-rails
   puma
   rails (= 5.1.4)
+  rails-ujs
   redis
   sass-rails
   simple_form

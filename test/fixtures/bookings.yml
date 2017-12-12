@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  check_in: 2017-12-12
+  check_out: 2017-12-12
+  guests: 1
+
+two:
+  check_in: 2017-12-12
+  check_out: 2017-12-12
+  guests: 1
