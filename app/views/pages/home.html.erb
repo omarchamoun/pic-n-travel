@@ -1,2 +1,9 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<%= link_to "Edit your profile", profile_edit_path, class: "btn btn-primary"  %>
+
+
+<%= link_to destroy_user_session_path, method: :delete do %>
+  <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+<% end %>
