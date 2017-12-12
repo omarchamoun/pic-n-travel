@@ -1,0 +1,2 @@
+class SavedTrip < ApplicationRecord
+end

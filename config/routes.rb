@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   end
 
 
-  get "profile", to: "users#profile"
-  get "stats", to: "users#stats"
+  get "profile", to: "profiles#profile"
+  get "stats", to: "profiles#stats"
 end

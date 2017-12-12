@@ -1,0 +1,2 @@
+class SavedTripsController < ApplicationController
+end
