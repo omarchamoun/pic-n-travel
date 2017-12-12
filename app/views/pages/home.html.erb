@@ -2,10 +2,9 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 
 
-<%= link_to "test show", trip_path %>
-
 <ul>
-  <% @trips.each do |trip| %>
+
+  <%= @trips.each do |trip| %>
   <li>
     <%= link_to trip.photo, trip_path(trip) %>
     <h3><%= trip.name %></h3>
